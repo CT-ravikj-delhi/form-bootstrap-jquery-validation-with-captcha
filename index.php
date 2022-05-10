@@ -80,39 +80,39 @@ $_SESSION['captcha_id'] = $str;
 
 
 							<div class="form-group row">
-							<label class="col-sm-6 col-form-label" for="password">Select Single</label>
-								<div class="col-sm-6 offset-sm-4">
+							<label class="col-sm-4 col-form-label" for="password">Select Single</label>
+								<div class="col-sm-8">
 								<div class="group">
 									<div class="form-radio">
-										<input type="radio" class="form-check-label" name="radio" id="radio1" required>
-										<label class="form-check-label" for="radio1">One</label>
+										<input type="radio" class="form-check-label" name="single" id="radio1" required>
+										<label class="form-check-label" for="radio1">Small</label>
 									</div>
 									<div class="form-radio">
-										<input type="radio" class="form-check-label" name="radio" id="radio2" required>
-										<label class="form-check-label" for="radio2">One</label>
+										<input type="radio" class="form-check-label" name="single" id="radio2" required>
+										<label class="form-check-label" for="radio2">Medium</label>
 									</div>
 									<div class="form-radio">
-										<input type="radio" class="form-check-label" name="radio" id="radio3" required>
-										<label class="form-check-label" for="radio3">One</label>
+										<input type="radio" class="form-check-label" name="single" id="radio3" required>
+										<label class="form-check-label" for="radio3">Large</label>
 									</div>
 								</div>
 								</div>
 							</div>
 							
 							<div class="form-group row">
-							<label class="col-sm-6 col-form-label" for="password">Select Multiple</label>
-								<div class="col-sm-6 offset-sm-4">
+							<label class="col-sm-4 col-form-label" for="password">Select Multiple</label>
+								<div class="col-sm-8">
 								<div class="group">
 									<div class="form-check">
-										<input type="checkbox" name="checkbox" id="colors1" value="colors1" class="form-check-input"/>
+										<input type="checkbox" name="multiple" id="colors1" value="colors1" class="form-check-input"/>
 										<label class="form-check-label" for="colors1">Red</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" name="checkbox" id="colors2" value="colors2" class="form-check-input"/>
+										<input type="checkbox" name="multiple" id="colors2" value="colors2" class="form-check-input"/>
 										<label class="form-check-label" for="colors2">Green</label>
 									</div>
 									<div class="form-check">
-										<input type="checkbox" name="checkbox" id="colors3" value="colors3" class="form-check-input"/>
+										<input type="checkbox" name="multiple" id="colors3" value="colors3" class="form-check-input"/>
 										<label class="form-check-label" for="colors3">Blue</label>
 									</div>
 								</div>
@@ -177,8 +177,8 @@ $_SESSION['captcha_id'] = $str;
 						required: true,
 						email: true
 					},
-					radio: "required",
-					checkbox: {
+					single: "required",
+					multiple: {
 						required: true,
 						minlength: 2
 					},
@@ -197,7 +197,7 @@ $_SESSION['captcha_id'] = $str;
 						minlength: "Your password must be at least 5 characters long",
 						equalTo: "Please enter the same password as above"
 					},
-					captcha: "Correct captcha is required. Click the captcha to generate a new one"
+					captcha: {required:"Correct captcha is required. Click the captcha to generate a new one",remote:"Invalid Captcha Code"}
 				},
 				errorElement: "em",
 				errorPlacement: function ( error, element ) {
