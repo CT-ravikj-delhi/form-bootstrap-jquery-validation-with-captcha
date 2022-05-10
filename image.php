@@ -21,7 +21,7 @@ $image = imagecreatefrompng('button.png');
 $colour = imagecolorallocate($image, 183, 178, 152);
 
 // Set the font
-$font = '../fonts/Anorexia.ttf';
+$font = 'Anorexia.ttf';
 
 // Set a random integer for the rotation between -15 and 15 degrees
 $rotate = rand(-15, 15);

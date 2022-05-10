@@ -18,7 +18,7 @@ $_SESSION['captcha_id'] = $str;
 <head>
 <title>Bootstrap Form</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<div class="container">
@@ -121,7 +121,7 @@ $_SESSION['captcha_id'] = $str;
 							
 							<div class="form-group row">
 								<div class="col-sm-9 offset-sm-4">
-									<div id="captchaimage"><a href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg" title="Click to refresh image"><img src="images/image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image"></a></div>
+									<div id="captchaimage"><a href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg" title="Click to refresh image"><img src="image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image"></a></div>
 		<label for="captcha">Enter the characters as seen on the image above (case insensitive):</label>
 		<input type="text" maxlength="6" name="captcha" id="captcha" class="form-control" style="width:200px">
 								</div>
@@ -138,8 +138,8 @@ $_SESSION['captcha_id'] = $str;
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript" src="jquery.validate.js"></script>
 	<script type="text/javascript">
 	$("body").on("click", "#refreshimg", function(){
 		$.post("newsession.php");
